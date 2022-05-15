@@ -1,0 +1,41 @@
+20:45:04 **** Rebuild of configuration Debug for project T.P 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\T.P 1.o" "..\\src\\T.P 1.c" 
+..\src\T.P 1.c: In function 'main':
+..\src\T.P 1.c:24:9: warning: passing argument 1 of 'scanf' from incompatible pointer type [-Wincompatible-pointer-types]
+   scanf(&opcion);
+         ^
+In file included from ..\src\T.P 1.c:1:0:
+c:\mingw\include\stdio.h:667:41: note: expected 'const char *' but argument is of type 'int *'
+ _CRTIMP __cdecl __MINGW_NOTHROW  int    scanf (const char *, ...);
+                                         ^~~~~
+..\src\T.P 1.c: In function 'descuento':
+..\src\T.P 1.c:63:9: warning: too many arguments for format [-Wformat-extra-args]
+  printf("El descuento es ",descuento);
+         ^~~~~~~~~~~~~~~~~~
+..\src\T.P 1.c: In function 'interes':
+..\src\T.P 1.c:69:9: warning: too many arguments for format [-Wformat-extra-args]
+  printf("El interes de Aerolineas y de latam es ",interesAerolineas,interesLatam);
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\T.P 1.c: In function 'bitcoin':
+..\src\T.P 1.c:76:9: warning: too many arguments for format [-Wformat-extra-args]
+  printf("Resultado= ",bitcoin);
+         ^~~~~~~~~~~~~
+..\src\T.P 1.c:74:8: warning: unused variable 'latamARS' [-Wunused-variable]
+  float latamARS= precioLatam *4606954.55;
+        ^~~~~~~~
+..\src\T.P 1.c:73:8: warning: unused variable 'aerolineasARS' [-Wunused-variable]
+  float aerolineasARS= precioAerolineas * 4606954.55;
+        ^~~~~~~~~~~~~
+..\src\T.P 1.c: In function 'precioUnitario':
+..\src\T.P 1.c:81:9: warning: too many arguments for format [-Wformat-extra-args]
+  printf("El precio unitario es: ", precioUnitario);
+         ^~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\T.P 1.c: In function 'imprimirResultados':
+..\src\T.P 1.c:85:9: warning: format '%f' expects argument of type 'double', but argument 4 has type 'void (*)(float,  float)' [-Wformat=]
+  printf("\na) Precio con tarjeta de debito: $%.2f\n"
+         ^
+gcc -o "T.P 1.exe" "src\\T.P 1.o" 
+
+20:45:07 Build Finished. 0 errors, 8 warnings. (took 2s.404ms)
+

@@ -1,0 +1,138 @@
+20:45:11 **** Rebuild of configuration Debug for project T.P 2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\T.P 2.o" "..\\src\\T.P 2.c" 
+..\src\T.P 2.c: In function 'main':
+..\src\T.P 2.c:25:3: warning: implicit declaration of function 'menu' [-Wimplicit-function-declaration]
+   menu();
+   ^~~~
+..\src\T.P 2.c:29:11: warning: implicit declaration of function 'altas' [-Wimplicit-function-declaration]
+   case 1: altas();
+           ^~~~~
+..\src\T.P 2.c:31:11: warning: implicit declaration of function 'modificaciones' [-Wimplicit-function-declaration]
+   case 2: modificaciones();
+           ^~~~~~~~~~~~~~
+..\src\T.P 2.c:33:11: warning: implicit declaration of function 'bajas' [-Wimplicit-function-declaration]
+   case 3: bajas();
+           ^~~~~
+..\src\T.P 2.c:35:11: warning: implicit declaration of function 'listado' [-Wimplicit-function-declaration]
+   case 4: listado();
+           ^~~~~~~
+..\src\T.P 2.c:37:11: warning: implicit declaration of function 'compactar' [-Wimplicit-function-declaration]
+   case 5: compactar();
+           ^~~~~~~~~
+..\src\T.P 2.c:39:11: warning: implicit declaration of function 'consulta' [-Wimplicit-function-declaration]
+   case 6: consulta();
+           ^~~~~~~~
+..\src\T.P 2.c: At top level:
+..\src\T.P 2.c:47:6: warning: conflicting types for 'menu'
+ void menu(){
+      ^~~~
+..\src\T.P 2.c:25:3: note: previous implicit declaration of 'menu' was here
+   menu();
+   ^~~~
+..\src\T.P 2.c: In function 'buscar':
+..\src\T.P 2.c:81:8: error: incompatible type for argument 1 of 'fread'
+  fread(registro, size,1,handler);
+        ^~~~~~~~
+In file included from ..\src\T.P 2.c:11:0:
+c:\mingw\include\stdio.h:734:41: note: expected 'void *' but argument is of type 'alumno {aka struct <anonymous>}'
+ _CRTIMP __cdecl __MINGW_NOTHROW  size_t fread (void *, size_t, size_t, FILE *);
+                                         ^~~~~
+..\src\T.P 2.c:84:13: warning: implicit declaration of function 'ftall' [-Wimplicit-function-declaration]
+    lugar == ftall(handler) - size;
+             ^~~~~
+..\src\T.P 2.c:84:10: warning: value computed is not used [-Wunused-value]
+    lugar == ftall(handler) - size;
+    ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+..\src\T.P 2.c: At top level:
+..\src\T.P 2.c:97:32: error: expected ';', ',' or ')' before '&' token
+ void ingresa_valida_legajo(int &legajo){
+                                ^
+..\src\T.P 2.c:106:29: error: expected ';', ',' or ')' before '&' token
+ int validar_alfa_nombre(int &legajo){
+                             ^
+..\src\T.P 2.c:110:44: error: empty character constant
+   if(!(c >= 'A' && '2' || c == 'Ñ' || c == '')){
+                                            ^~
+..\src\T.P 2.c: In function 'nombre_valido':
+..\src\T.P 2.c:121:15: error: expected '=', ',', ';', 'asm' or '__attribute__' before '*' token
+  int longitud * strlen(nombre);
+               ^
+..\src\T.P 2.c:121:15: error: invalid type argument of unary '*' (have 'size_t {aka unsigned int}')
+  int longitud * strlen(nombre);
+               ^~~~~~~~~~~~~~~~
+..\src\T.P 2.c:122:9: error: 'longitud' undeclared (first use in this function)
+  return longitud > 0 && longitud < 41 && validar_alfa_nombre(nombre);
+         ^~~~~~~~
+..\src\T.P 2.c:122:9: note: each undeclared identifier is reported only once for each function it appears in
+..\src\T.P 2.c:122:42: warning: implicit declaration of function 'validar_alfa_nombre' [-Wimplicit-function-declaration]
+  return longitud > 0 && longitud < 41 && validar_alfa_nombre(nombre);
+                                          ^~~~~~~~~~~~~~~~~~~
+..\src\T.P 2.c: In function 'promedio_valido':
+..\src\T.P 2.c:136:2: error: expected ';' before '}' token
+  }
+  ^
+..\src\T.P 2.c: In function 'ingresa_valida_nombre':
+..\src\T.P 2.c:138:36: error: expected ';', ',' or ')' before '&' token
+ void ingresa_valida_promedio(float &promedio){
+                                    ^
+..\src\T.P 2.c: In function 'altas':
+..\src\T.P 2.c:158:3: warning: implicit declaration of function 'Ingrese_valida_legajo' [-Wimplicit-function-declaration]
+   Ingrese_valida_legajo(registro.legajo);
+   ^~~~~~~~~~~~~~~~~~~~~
+..\src\T.P 2.c:160:13: error: expected '=', ',', ';', 'asm' or '__attribute__' before '?' token
+    long pos ? buscar(hanlder, registro.legajo);
+             ^
+..\src\T.P 2.c:160:13: error: expected expression before '?' token
+..\src\T.P 2.c:160:22: error: 'hanlder' undeclared (first use in this function)
+    long pos ? buscar(hanlder, registro.legajo);
+                      ^~~~~~~
+..\src\T.P 2.c:161:7: error: 'pos' undeclared (first use in this function)
+    if(pos ==-1L){
+       ^~~
+..\src\T.P 2.c:163:5: warning: implicit declaration of function 'ingresa_valida_promedio' [-Wimplicit-function-declaration]
+     ingresa_valida_promedio(registro.promedio);
+     ^~~~~~~~~~~~~~~~~~~~~~~
+..\src\T.P 2.c:172:4: warning: implicit declaration of function 'ingresa_valida_legajo' [-Wimplicit-function-declaration]
+    ingresa_valida_legajo(registro.legajo);
+    ^~~~~~~~~~~~~~~~~~~~~
+..\src\T.P 2.c: In function 'bajas':
+..\src\T.P 2.c:179:52: error: expected ')' before ';' token
+  FILE *handler = abrir_archivo("maestro.dat", "r+b";)
+                                                    ^
+..\src\T.P 2.c:180:2: error: expected ',' or ';' before 'if'
+  if(handler != NULL){
+  ^~
+..\src\T.P 2.c:179:8: warning: unused variable 'handler' [-Wunused-variable]
+  FILE *handler = abrir_archivo("maestro.dat", "r+b";)
+        ^~~~~~~
+..\src\T.P 2.c: At top level:
+..\src\T.P 2.c:215:6: warning: conflicting types for 'listado'
+ void listado(){
+      ^~~~~~~
+..\src\T.P 2.c:35:11: note: previous implicit declaration of 'listado' was here
+   case 4: listado();
+           ^~~~~~~
+..\src\T.P 2.c:232:21: error: expected declaration specifiers or '...' before '{' token
+ void modificaciones({
+                     ^
+..\src\T.P 2.c: In function 'nombre_valido':
+..\src\T.P 2.c:123:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+At top level:
+..\src\T.P 2.c:178:6: warning: 'bajas' defined but not used [-Wunused-function]
+ void bajas(){
+      ^~~~~
+..\src\T.P 2.c:152:6: warning: 'altas' defined but not used [-Wunused-function]
+ void altas(){
+      ^~~~~
+..\src\T.P 2.c:147:6: warning: 'leer' defined but not used [-Wunused-function]
+ void leer(alumno *registro, long size, long pos, FILE*handler){
+      ^~~~
+..\src\T.P 2.c:134:5: warning: 'promedio_valido' defined but not used [-Wunused-function]
+ int promedio_valido(float promedio){
+     ^~~~~~~~~~~~~~~
+
+20:45:11 Build Failed. 16 errors, 21 warnings. (took 173ms)
+
