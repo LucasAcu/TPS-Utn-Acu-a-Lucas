@@ -1,8 +1,11 @@
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "LinkedList.h"
 #include "Controller.h"
 #include "Passenger.h"
+
+
 
 /****************************************************
     Menu:
@@ -22,6 +25,54 @@
 
 int main()
 {
+	FILE *pFile;
+	int r;
+	int var1[1001],var2[1001],var3[1003],var4[1001],var5[1001],var6[1001],var7[1001];
+
+	pFile = fopen("data.csv","r");
+	if(pFile == NULL)
+	{
+		printf("El archivo no existe");
+		exit(EXIT_FAILURE);
+	}
+	do
+	{
+		r =fscanf(pFile,"%d,%s,%s,%d,%d,%s,%s\n",var1,var2,var3,var4,var5,var6,var7);
+		if(r==4)
+		{
+			printf("Lei %d %s %s %d %d %s %s\n",var1,var2,var3,var4,var5,var6,var7);
+		}
+		else
+			break;
+	}while(!feof(pFile));
+
+	fclose(pFile);
+	exit(EXIT_SUCCESS);
+
+
+	int rb;
+	pFile = fopen("data.csv","rb");
+		if(pFile == NULL)
+		{
+			printf("El archivo no existe");
+			exit(EXIT_FAILURE);
+		}
+		do
+		{
+			rb =fscanf(pFile,"%d,%s,%s,%d,%d,%s,%s\n",var1,var2,var3,var4,var5,var6,var7);
+			if(rb==4)
+			{
+				printf("Lei %d %s %s %d %d %s %s\n",var1,var2,var3,var4,var5,var6,var7);
+			}
+			else
+				break;
+		}while(!feof(pFile));
+
+		fclose(!feof(pFile));
+		exit(EXIT_SUCCESS);
+
+
+
     int option = 0;
     int proximoId = 0;
     float bufferAltura;
@@ -46,12 +97,16 @@ int main()
             	}
             	break;
             case 4:
+            	modificar();
             	break;
             case 5:
+            	baja();
             	break;
             case 6:
+            	listaPasajero();
             	break;
             case 7:
+            	ordenarPasajeros();
             	break;
             case 8:
             	break;
@@ -59,6 +114,7 @@ int main()
             	break;
             case 10:
             	break;
+            	fput('p',c)
         }
     }while(option != 10);
     return 0;

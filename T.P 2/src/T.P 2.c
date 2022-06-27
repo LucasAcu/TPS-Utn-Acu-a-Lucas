@@ -19,6 +19,17 @@ struct{
 	int marca;
 }typedef alumno;
 
+typedef struct{
+	int id;
+	char name[51];
+	char lastname[51];
+	float price;
+	char flycode[10];
+	int typePassenger;
+	int statusFlight;
+	int isEmpty;
+}Passenger;
+
 int main(void) {
 	int opcion;
 	do{
@@ -229,8 +240,8 @@ void listado(){
 	}
 }
 
-void modificaciones({
-	FILE *handler = abrir_archivo("maestro.dat","r+b");
+void modificaciones(alumno){
+	FILE *handler = abrir_archivo("maestro.dat","r+b",);
 	if(handler !=NULL){
 		alumno registro;
 		long size = siezeof(alumno);
