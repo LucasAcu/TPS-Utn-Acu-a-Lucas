@@ -1,13 +1,40 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 
 
 
 
 float calcularPrecios(float debito,float credito,float bitcoin,float precioUnitario,float precioDif);
 void ingresarKilometros();
+int utn_getNumero(int* pResultado,char* mensaje, char* mensajeError,int minimo,int maximo,int reintentos);
 
 float precioAerolineas,precioLatam,kilometros;
+
+int utn_getNumero(int* pResultado,char* mensaje, char* mensajeError,int minimo,int maximo,int reintentos)
+{
+	int retorno = -1;
+	int buffer;
+	if(pResultado != NULL && mensaje != NULL && mensajeError != NULL && minimo <= maximo && reintentos >=0)
+	{
+		do
+		{
+			printf("%s",mensaje);
+			scanf("%c",&buffer);
+			if(buffer <= minimo && buffer <= maximo)
+			{
+				*pResultado = buffer;
+				retorno =0;
+			}
+			else
+			{
+				printf("%s",mensajeError);
+				reintentos--;
+			}
+		}while(reintentos>=0);
+	}
+	return retorno;
+}
 
 int main(void) {
 	int opcion;
@@ -32,7 +59,7 @@ int main(void) {
 					system("pause");
 					break;
 			case 4: informarResultados();
-					system("paise");
+					system("pause");
 					break;
 			case 5: cargaForzada();
 					system("pause");
@@ -143,6 +170,7 @@ float calcularPrecios(float debito,float credito,float bitcoin,float precioUnita
 	return 1;
 
 }
+
 void informarResultados()
 {
 
@@ -150,7 +178,9 @@ void informarResultados()
 
 void cargaForzada()
 {
+	for(int i=0;i<5;i++){
 
+	}
 }
 
 

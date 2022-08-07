@@ -1,41 +1,79 @@
-20:45:04 **** Rebuild of configuration Debug for project T.P 1 ****
+18:23:59 **** Incremental Build of configuration Debug for project T.P 1 ****
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\T.P 1.o" "..\\src\\T.P 1.c" 
 ..\src\T.P 1.c: In function 'main':
-..\src\T.P 1.c:24:9: warning: passing argument 1 of 'scanf' from incompatible pointer type [-Wincompatible-pointer-types]
-   scanf(&opcion);
-         ^
-In file included from ..\src\T.P 1.c:1:0:
-c:\mingw\include\stdio.h:667:41: note: expected 'const char *' but argument is of type 'int *'
- _CRTIMP __cdecl __MINGW_NOTHROW  int    scanf (const char *, ...);
-                                         ^~~~~
-..\src\T.P 1.c: In function 'descuento':
-..\src\T.P 1.c:63:9: warning: too many arguments for format [-Wformat-extra-args]
-  printf("El descuento es ",descuento);
-         ^~~~~~~~~~~~~~~~~~
-..\src\T.P 1.c: In function 'interes':
-..\src\T.P 1.c:69:9: warning: too many arguments for format [-Wformat-extra-args]
-  printf("El interes de Aerolineas y de latam es ",interesAerolineas,interesLatam);
-         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-..\src\T.P 1.c: In function 'bitcoin':
-..\src\T.P 1.c:76:9: warning: too many arguments for format [-Wformat-extra-args]
-  printf("Resultado= ",bitcoin);
-         ^~~~~~~~~~~~~
-..\src\T.P 1.c:74:8: warning: unused variable 'latamARS' [-Wunused-variable]
-  float latamARS= precioLatam *4606954.55;
-        ^~~~~~~~
-..\src\T.P 1.c:73:8: warning: unused variable 'aerolineasARS' [-Wunused-variable]
-  float aerolineasARS= precioAerolineas * 4606954.55;
-        ^~~~~~~~~~~~~
-..\src\T.P 1.c: In function 'precioUnitario':
-..\src\T.P 1.c:81:9: warning: too many arguments for format [-Wformat-extra-args]
-  printf("El precio unitario es: ", precioUnitario);
-         ^~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\T.P 1.c:27:12: warning: implicit declaration of function 'IngresarKilometros' [-Wimplicit-function-declaration]
+    case 1: IngresarKilometros();
+            ^~~~~~~~~~~~~~~~~~
+..\src\T.P 1.c:30:12: warning: implicit declaration of function 'IngresarPrecioVuelos' [-Wimplicit-function-declaration]
+    case 2: IngresarPrecioVuelos();
+            ^~~~~~~~~~~~~~~~~~~~
+..\src\T.P 1.c:33:12: error: too few arguments to function 'calcularPrecios'
+    case 3: calcularPrecios();
+            ^~~~~~~~~~~~~~~
+..\src\T.P 1.c:8:7: note: declared here
+ float calcularPrecios(float debito,float credito,float bitcoin,float precioUnitario,float precioDif);
+       ^~~~~~~~~~~~~~~
+..\src\T.P 1.c:36:12: warning: implicit declaration of function 'informarResultados' [-Wimplicit-function-declaration]
+    case 4: informarResultados();
+            ^~~~~~~~~~~~~~~~~~
+..\src\T.P 1.c:39:12: warning: implicit declaration of function 'cargaForzada' [-Wimplicit-function-declaration]
+    case 5: cargaForzada();
+            ^~~~~~~~~~~~
+..\src\T.P 1.c: At top level:
+..\src\T.P 1.c:63:6: warning: conflicting types for 'IngresarPrecioVuelos'
+ void IngresarPrecioVuelos(Aerolineas,Latam)
+      ^~~~~~~~~~~~~~~~~~~~
+..\src\T.P 1.c:30:12: note: previous implicit declaration of 'IngresarPrecioVuelos' was here
+    case 2: IngresarPrecioVuelos();
+            ^~~~~~~~~~~~~~~~~~~~
+..\src\T.P 1.c: In function 'IngresarPrecioVuelos':
+..\src\T.P 1.c:63:6: warning: type of 'Aerolineas' defaults to 'int' [-Wimplicit-int]
+ void IngresarPrecioVuelos(Aerolineas,Latam)
+      ^~~~~~~~~~~~~~~~~~~~
+..\src\T.P 1.c:63:6: warning: type of 'Latam' defaults to 'int' [-Wimplicit-int]
+..\src\T.P 1.c: In function 'calcularPrecios':
+..\src\T.P 1.c:90:10: warning: too many arguments for format [-Wformat-extra-args]
+   printf("El descuento es ",&descuento);
+          ^~~~~~~~~~~~~~~~~~
+..\src\T.P 1.c:97:12: warning: format '%f' expects argument of type 'double', but argument 2 has type 'float *' [-Wformat=]
+   printf("%f",&precioAerolineas);
+            ^
+..\src\T.P 1.c:99:12: warning: format '%f' expects argument of type 'double', but argument 2 has type 'float *' [-Wformat=]
+   printf("%f",&precioLatam);
+            ^
+..\src\T.P 1.c:103:10: warning: too many arguments for format [-Wformat-extra-args]
+   printf("El interes de Aerolineas y de latam es ",interesAerolineas,interesLatam);
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\T.P 1.c:115:10: warning: too many arguments for format [-Wformat-extra-args]
+   printf("Resultado= ",&bitcoin);
+          ^~~~~~~~~~~~~
+..\src\T.P 1.c:123:10: warning: too many arguments for format [-Wformat-extra-args]
+   printf("El precio unitario es: ", precioUnitario);
+          ^~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\T.P 1.c:138:39: warning: format '%f' expects argument of type 'double', but argument 2 has type 'float *' [-Wformat=]
+    printf("Latam es mas caro cuesta: %f",&latamARS);
+                                       ^
+..\src\T.P 1.c:142:46: warning: format '%f' expects argument of type 'double', but argument 2 has type 'float *' [-Wformat=]
+    printf("Aerolineas es mas caro y cuesta: %f",&aerolineasARS);
+                                              ^
+..\src\T.P 1.c: At top level:
+..\src\T.P 1.c:148:6: warning: conflicting types for 'informarResultados'
+ void informarResultados()
+      ^~~~~~~~~~~~~~~~~~
+..\src\T.P 1.c:36:12: note: previous implicit declaration of 'informarResultados' was here
+    case 4: informarResultados();
+            ^~~~~~~~~~~~~~~~~~
+..\src\T.P 1.c:153:6: warning: conflicting types for 'cargaForzada'
+ void cargaForzada()
+      ^~~~~~~~~~~~
+..\src\T.P 1.c:39:12: note: previous implicit declaration of 'cargaForzada' was here
+    case 5: cargaForzada();
+            ^~~~~~~~~~~~
 ..\src\T.P 1.c: In function 'imprimirResultados':
-..\src\T.P 1.c:85:9: warning: format '%f' expects argument of type 'double', but argument 4 has type 'void (*)(float,  float)' [-Wformat=]
+..\src\T.P 1.c:163:9: warning: too many arguments for format [-Wformat-extra-args]
   printf("\na) Precio con tarjeta de debito: $%.2f\n"
-         ^
-gcc -o "T.P 1.exe" "src\\T.P 1.o" 
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-20:45:07 Build Finished. 0 errors, 8 warnings. (took 2s.404ms)
+18:23:59 Build Failed. 1 errors, 18 warnings. (took 163ms)
 

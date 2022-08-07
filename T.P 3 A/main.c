@@ -1,10 +1,11 @@
 
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "LinkedList.h"
 #include "Controller.h"
 #include "Passenger.h"
-
+#define NOMBRE_LEN 60;
 
 
 /****************************************************

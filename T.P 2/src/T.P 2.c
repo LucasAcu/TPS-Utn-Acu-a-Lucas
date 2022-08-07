@@ -333,3 +333,5 @@ void consulta(){
 		fclose(handler);
 	}
 }
+
+
